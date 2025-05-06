@@ -29,6 +29,7 @@ def main():
                 end_string = input("Enter the ending angle: ")
                 # CAST it to an integer
                 end_integer = int(end_string)
+                # Check if the angles are in the needed range
                 if start_integer >= 0 and end_integer <= 360:
                     break
                 else:
