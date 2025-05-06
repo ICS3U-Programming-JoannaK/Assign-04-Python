@@ -37,6 +37,7 @@ def main():
                     print(
                     "Angles should be in the range of 0 and 360, and starting angle must be smaller than ending angle. "
                 )
+            # Catches erroneous input for the ending angle
             except Exception:
                 print(
                 "{} is not a valid input. Please enter an angle between 0 and 360".format(
