@@ -44,6 +44,7 @@ def main():
                     end_string
                 )
             )
+                # Catches erroneous input for the starting angle
         except Exception:
             print(
                 "{} is not a valid input. Please enter an angle between 0 and 360".format(
