@@ -31,6 +31,7 @@ def main():
                 end_integer = int(end_string)
                 # Check if the angles are in the needed range
                 if start_integer >= 0 and end_integer <= 360:
+                    # Exits the loop when the condition is met
                     break
                 else:
                     print(
