@@ -25,7 +25,9 @@ def main():
             #CAST it to a an integer
             start_integer = int(start_string)
             try: 
+                # Asking user to input their ending angle and assign it to a string
                 end_string = input("Enter the ending angle: ")
+                # CAST it to an integer
                 end_integer = int(end_string)
                 if start_integer >= 0 and end_integer <= 360:
                     break
