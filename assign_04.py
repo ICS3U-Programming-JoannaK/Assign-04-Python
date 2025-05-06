@@ -55,14 +55,20 @@ def main():
     # This is the table header/title
     print("Angle\t\tTan")
     print("---------------------------\n")
+    # This loop goes through the angle range given in steps of 10 degrees
     for angle in range(start_integer, end_integer + 1, 10):
+        # Check for where the angle is undefined
         if angle % 180 == 90:
+            # This prints the word "Undefined"
             print("\n")
-            print("{}\t\tUnderfined".format(angle))
+            print("{}\t\tUndefined".format(angle))
         else:
+            # Converts degrees to radians
             radians = math.radians(angle)
+            # Calculates the tangent of the angle
             tangent_number = math.tan(radians)
             print("\n")
+            # Prints the tangent of the angle in 5 decimal places
             print("{}\t\t{:,.5f}\n".format(angle, tangent_number))
 
 
