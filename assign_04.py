@@ -8,6 +8,7 @@
 
 import math
 
+
 # Display greeting card
 def main():
     print("*****************************************")
@@ -17,14 +18,14 @@ def main():
     print("*****************************************")
     print("\n")
 
-# using a while true loop to repeatedly ask for valid angles from the user
+    # using a while true loop to repeatedly ask for valid angles from the user
     while True:
         # Asking the user to input their starting angle and assign it to a string
         start_string = input("Enter the starting angle: ")
         try:
-            #CAST it to a an integer
+            # CAST it to a an integer
             start_integer = int(start_string)
-            try: 
+            try:
                 # Asking user to input their ending angle and assign it to a string
                 end_string = input("Enter the ending angle: ")
                 # CAST it to an integer
@@ -35,15 +36,15 @@ def main():
                     break
                 else:
                     print(
-                    "Angles should be in the range of 0 and 360, and starting angle must be smaller than ending angle. "
-                )
+                        "Angles should be in the range of 0 and 360, and starting angle must be smaller than ending angle. "
+                    )
             # Catches erroneous input for the ending angle
             except Exception:
                 print(
-                "{} is not a valid input. Please enter an angle between 0 and 360".format(
-                    end_string
+                    "{} is not a valid input. Please enter an angle between 0 and 360".format(
+                        end_string
+                    )
                 )
-            )
                 # Catches erroneous input for the starting angle
         except Exception:
             print(
@@ -51,6 +52,7 @@ def main():
                     start_string
                 )
             )
+    # This is the table header/title
     print("Angle\t\tTan")
     print("---------------------------\n")
     for angle in range(start_integer, end_integer + 1, 10):
