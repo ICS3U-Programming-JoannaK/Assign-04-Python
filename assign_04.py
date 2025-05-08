@@ -35,9 +35,7 @@ def main():
                     # Exits the loop when the condition is met
                     break
                 else:
-                    print(
-                        "Angles should be in the range of 0 and 360, and starting angle must be smaller than ending angle. "
-                    )
+                    print("Angles should be in the range of 0 and 360.")
             # Catches erroneous input for the ending angle
             except Exception:
                 print(
@@ -52,24 +50,26 @@ def main():
                     start_string
                 )
             )
-    # This is the table header/title
-    print("Angle\t\tTan")
-    print("---------------------------\n")
-    # This loop goes through the angle range given in steps of 10 degrees
-    for angle in range(start_integer, end_integer + 1, 10):
-        # Check for where the angle is undefined
-        if angle % 180 == 90:
-            # This prints the word "Undefined"
-            print("\n")
-            print("{}\t\tUndefined".format(angle))
-        else:
-            # Converts degrees to radians
-            radians = math.radians(angle)
-            # Calculates the tangent of the angle
-            tangent_number = math.tan(radians)
-            print("\n")
-            # Prints the tangent of the angle in 5 decimal places
-            print("{}\t\t{:,.5f}\n".format(angle, tangent_number))
+
+    if start_integer > end_integer:
+        print("The starting angle must be smaller than ending angle")
+    else:
+        # This is the table header/title
+        print("\nAngle\t\tTan")
+        print("---------------------------\n")
+        # This loop goes through the angle range given in steps of 10 degrees
+        for angle in range(start_integer, end_integer + 1, 10):
+            # Check for where the angle is undefined
+            if angle % 180 == 90:
+                # This prints the word "Undefined"
+                print("{}\t\tUndefined".format(angle))
+            else:
+                # Converts degrees to radians
+                radians = math.radians(angle)
+                # Calculates the tangent of the angle
+                tangent_number = math.tan(radians)
+                # Prints the tangent of the angle in 5 decimal places
+                print("{}\t\t{:,.5f}\n".format(angle, tangent_number))
 
 
 if __name__ == "__main__":
